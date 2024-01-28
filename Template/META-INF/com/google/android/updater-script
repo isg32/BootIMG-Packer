@@ -1,7 +1,7 @@
 
 show_progress(0.200000, 10);
 ui_print( ); 
-ui_print( Flashing KSU for hanoip); 
+ui_print( Flashing KSU for Hanoip); 
 ui_print(============================); 
 ui_print( ); 
 ui_print(Installing Images...); 
