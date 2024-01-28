@@ -3,7 +3,7 @@
 while getopts "hvf:" flag; do
  case $flag in
    h) echo " "
-      echo "KSU Packer - Boot img packer for Custom recoveries."
+      echo "BootIMG Packer - Boot img packer for Custom recoveries."
       echo " "
       echo "Author: github.com/isg32 "
       echo " "
@@ -25,6 +25,7 @@ done
 
 echo " "
 
+read -sp "Enter Your BootType - KSU/Magisk/ETC. : " BOOT
 read -sp "Enter Your device: " DEVICE
 echo " "
 echo "[OKAY]"
@@ -53,7 +54,7 @@ sleep 0.5
 echo """
 show_progress(0.200000, 10);
 ui_print(" "); 
-ui_print(" Flashing KSU for $DEVICE"); 
+ui_print(" Flashing $BOOT for $DEVICE"); 
 ui_print("============================"); 
 ui_print(" "); 
 ui_print("Installing Images..."); 
@@ -85,8 +86,8 @@ echo " "
 echo "=============================================="
 echo " "
 cd Template
-zip -r $DEVICE-KSU_Build-$(date '+%d%m%Y').zip *
-mv $DEVICE-KSU_Build-$(date '+%d%m%Y').zip ../
+zip -r $DEVICE-$BOOT-$(date '+%d%m%Y').zip *
+mv $DEVICE-$BOOT-$(date '+%d%m%Y').zip ../
 cd ..
 echo " "
 echo "- Zip Done"
