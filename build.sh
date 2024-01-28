@@ -25,12 +25,13 @@ done
 
 echo " "
 
-read -sp "Enter Your BootType - KSU/Magisk/ETC. : " BOOT
-read -sp "Enter Your device: " DEVICE
+read -p "Enter Your BootType - KSU/Magisk/ETC. : " BOOT
+
+read -p "Enter Your device: " DEVICE
 echo " "
 echo "[OKAY]"
 echo " "
-echo -e "\nBuilding Flashable KSU for $DEVICE"
+echo -e "\nBuilding Flashable $BOOT for $DEVICE"
 
 echo """ 
 ==============================================
@@ -86,8 +87,8 @@ echo " "
 echo "=============================================="
 echo " "
 cd Template
-zip -r $DEVICE-$BOOT-$(date '+%d%m%Y').zip *
-mv $DEVICE-$BOOT-$(date '+%d%m%Y').zip ../
+zip -r $BOOT-$(date '+%d%m%Y')-$DEVICE.zip *
+mv $BOOT-$(date '+%d%m%Y')-$DEVICE.zip ../
 cd ..
 echo " "
 echo "- Zip Done"
