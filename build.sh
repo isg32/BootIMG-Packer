@@ -5,6 +5,8 @@ while getopts "hvf:" flag; do
    h) echo " "
       echo "KSU Packer - Boot img packer for Custom recoveries."
       echo " "
+      echo "Author: github.com/isg32 "
+      echo " "
       echo "Usage: "
       echo " - Place your Bootimg in img folder"
       echo " - In the main dir, run bash build.sh "
@@ -14,13 +16,6 @@ while getopts "hvf:" flag; do
       echo " Voila, U have your flashable KSU "
       echo " "
       exit 0
-   ;;
-   v) # Handle the -v flag
-   # Enable verbose mode
-   ;;
-   f) # Handle the -f flag with an argument
-   filename=$OPTARG
-   # Process the specified file
    ;;
    \?)
    # Handle invalid options
